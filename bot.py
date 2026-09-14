@@ -3432,7 +3432,7 @@ async def post_init(
     await application.bot.set_chat_menu_button(
         menu_button=MenuButtonWebApp(
             text="Play",
-            web_app=WebAppInfo(url="https://example.com"),
+            web_app=WebAppInfo(url="https://bingo-backend-p3z5.onrender.com"),
         )
     )
 
