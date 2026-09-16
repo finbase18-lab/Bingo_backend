@@ -7,13 +7,13 @@ from telegram import (
     KeyboardButton,
     BotCommand,
     MenuButtonCommands,
-MenuButtonWebApp,
+    MenuButtonWebApp,
     WebAppInfo,
     InlineKeyboardButton,
     InlineKeyboardMarkup,
 )
-from telegram.request import HTTPXRequest
 
+from telegram.request import HTTPXRequest
 from telegram.ext import (
     Application,
     CommandHandler,
@@ -3313,28 +3313,28 @@ def main():
         return
 
 
-    telegram_request = HTTPXRequest(
-    read_timeout=30.0,
-    write_timeout=30.0,
-    connect_timeout=30.0,
-    pool_timeout=10.0,
-)
+        telegram_request = HTTPXRequest(
+        read_timeout=30.0,
+        write_timeout=30.0,
+        connect_timeout=30.0,
+        pool_timeout=10.0,
+    )
 
-telegram_updates_request = HTTPXRequest(
-    read_timeout=30.0,
-    write_timeout=30.0,
-    connect_timeout=30.0,
-    pool_timeout=10.0,
-)
+    telegram_updates_request = HTTPXRequest(
+        read_timeout=30.0,
+        write_timeout=30.0,
+        connect_timeout=30.0,
+        pool_timeout=10.0,
+    )
 
-application = (
-    Application.builder()
-    .token(BOT_TOKEN)
-    .request(telegram_request)
-    .get_updates_request(telegram_updates_request)
-    .post_init(post_init)
-    .build()
-)
+    application = (
+        Application.builder()
+        .token(BOT_TOKEN)
+        .request(telegram_request)
+        .get_updates_request(telegram_updates_request)
+        .post_init(post_init)
+        .build()
+    )
 
 
     # --------------------------------------------------------
