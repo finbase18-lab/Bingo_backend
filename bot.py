@@ -7,6 +7,7 @@ from telegram import (
     KeyboardButton,
     BotCommand,
     MenuButtonCommands,
+MenuButtonWebApp,
     WebAppInfo,
     InlineKeyboardButton,
     InlineKeyboardMarkup,
